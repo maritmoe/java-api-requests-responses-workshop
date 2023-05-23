@@ -300,7 +300,7 @@ Implement the API for Publishers as we have done for the Authors
 
 ## Extension
 
-Investigate how you can return errors codes (400 and 404) from the methods if they fail, as well as returning the null objects.
+Investigate how you can return errors codes (400 and 404) from the methods if they fail and what else should be returned.
 
 
 
