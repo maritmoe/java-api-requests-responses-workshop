@@ -1,8 +1,10 @@
-openapi: 3.0.3
+openapi: 3.1.0
 info:
   title: Java API Requests and Responses Workshop - Core Criteria
-  description: Core API for the Requests and Repsonses workshop
-  version: 0.0.2
+  description: Core API for the Requests and Responses workshop with no errors in this file
+  version: 0.0.4
+  contact:
+    name: Responses and Requests
 
 servers:
   - url: http://localhost:4000
@@ -13,6 +15,7 @@ paths:
     post:
       tags:
         - authors
+      operationId: authorsPost
       summary: Route to use (with a payload) when creating a new author
       description: New author creation
       requestBody:
@@ -21,7 +24,8 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateAuthor'
       responses:
-        201:
+        '201':
+          description: Author created
           content:
             application/json:
               schema:
@@ -31,29 +35,42 @@ paths:
         - authors
       summary: Plain GET to access the whole list
       description: Get all of the listed authors
+      operationId: getAuthors
       responses:
-        200:
+        '200':
+          description: Get all authors
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/AllAuthors'
   /authors/{id}:
     get:
+      parameters:
+        - name: id
+          in: path
+          description: Id of the author
+          required: true
+          schema:
+            type: integer
       tags:
         - authors
       summary: Get a specific author using their ID
       description: Get one author from the list
+      operationId: getSpecificAuthor
       responses:
-        200:
+        '200':
+          description: Get a single author
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Author'
+
     put:
       tags:
         - authors
       summary: Update an existing author
       description: use the ID of an author to update them using the payload
+      operationId: updateAuthor
       parameters:
         - name: id
           in: path
@@ -67,7 +84,8 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateAuthor'
       responses:
-        201:
+        '201':
+          description: Author successfully updated
           content:
             application/json:
               schema:
@@ -77,6 +95,7 @@ paths:
         - authors
       summary: Delete an author using the ID
       description: Delete an author using their ID
+      operationId: deleteAuthor
       parameters:
         - name: id
           in: path
@@ -85,7 +104,8 @@ paths:
           schema:
             type: integer
       responses:
-        200:
+        '200':
+          description: Successfully deleted the Author
           content:
             application/json:
               schema:
