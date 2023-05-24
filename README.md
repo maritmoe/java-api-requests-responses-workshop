@@ -117,6 +117,14 @@ You can also import the file directly into Insomnia to view the details in there
 
 Here is the current spec, being served using GitHub Pages [https://boolean-uk.github.io/java-api-requests-responses-workshop/](https://boolean-uk.github.io/java-api-requests-responses-workshop/).
 
+## Exercise 1
+
+Create an OpenAPI Spec for Publishers that matches the Authors one.
+
+Publishers should have a name and a city associated with them. 
+
+The Spec should include the equivalent 5 endpoints we described in our Authors one.
+
 ## Building the endpoints to match the spec
 
 We need to implement an Authors class to manage the end points for the API, we're going to use an ArrayList of Author objects to do this, the Author class itself will just be a simple class including two fields that are Strings, `name` and `email` these will be set in the Constructor and have the usual getters and setters.
@@ -288,13 +296,6 @@ Finally we need to add a `DELETE` resquest.
 
 Since we're going to return the Author we're deleting, you might think we need to get it first before we remove it, but the remove method on an ArrayList actually removes the item it and returns it, so we can just use that.
 
-## Exercise 1
-
-Create an OpenAPI Spec for Publishers that matches the Authors one.
-
-Publishers should have a name and a city associated with them. 
-
-The Spec should include the equivalent 5 endpoints we described in our Authors one.
 
 ## Exercise 2
 
