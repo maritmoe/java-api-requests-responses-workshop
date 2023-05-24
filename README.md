@@ -115,6 +115,8 @@ To view the result serve the page using live-server in VS Code or something simi
 
 You can also import the file directly into Insomnia to view the details in there.
 
+Here is the current spec, being served using GitHub Pages [https://boolean-uk.github.io/java-api-requests-responses-workshop/](https://boolean-uk.github.io/java-api-requests-responses-workshop/).
+
 ## Building the endpoints to match the spec
 
 We need to implement an Authors class to manage the end points for the API, we're going to use an ArrayList of Author objects to do this, the Author class itself will just be a simple class including two fields that are Strings, `name` and `email` these will be set in the Constructor and have the usual getters and setters.
