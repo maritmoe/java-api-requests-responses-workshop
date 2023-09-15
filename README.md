@@ -105,7 +105,7 @@ It starts off with some information about this version including the url to use.
 
 Then we have a tag which is used as a title, followed by the decription of the URLs, Payloads and responses for various parts of the spec, the example schema can be found at the end of the document. If you stick to a similar naming convention for all of your APIs then these can be created and debugged fairly easily, if you aren't consistent then it is easy for bugs to creep in.
 
-We can turn this into a single webpage that can be viewed in a browser using `redocly` (you will need to install this using npm to ) and then you can use the following command:
+We can turn this into a single webpage that can be viewed in a browser using `redocly` (you will need to install this using npm too) and then you can use the following command:
 
 ```bash
 redocly build-docs docs/openapi-core.yml -o ./docs/index.html
