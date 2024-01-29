@@ -226,7 +226,7 @@ public class AuthorsController {
 }
 ```
 
-Run your program and navigate to [http://locahost:4000/authors](http://locahost:4000/authors) in your browser. If you used the same default authors as above then you will see:
+Run your program and navigate to [http://localhost:4000/authors](http://localhost:4000/authors) in your browser. If you used the same default authors as above then you will see:
 
 ```json
 [{"name":"JRR Tolkien","email":"jrr@tolkien.com"},{"name":"Jane Austen","email":"jane@austen.com"}]
